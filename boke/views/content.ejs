@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>文章</title>
+	<link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css"/>
+</head>
+<body>
+	 <%- include('header.ejs') %>
+	 <div class="section col-md-12">
+	 		<div class='liuyan'>
+		<div class="title">
+			<div class='headers'>
+				<div id="cont-top">
+				<h3>mongoldb与mysql的区别</h3>
+				<p><span>作者：守株待兔的农夫</span><span>发布于：2017-8-10</span></p>
+			</div>
+			</div>
+		</div>
+			<div class="bottom " id="cont" >
+				<p> 关系型数据库，是指采用了关系模型来组织数据的数据库
+关系模型指的就是二维表格模型，而一个关系型数据库就是由二维表及其之间的联系所组成的一个数据组织。
+关系型数据库的优点：
+容易理解：二维表结构是非常贴近逻辑世界的一个概念，关系模型相对网状、层次等其他模型来说更容易理解
+使用方便：通用的SQL语言使得操作关系型数据库非常方便
+易于维护：丰富的完整性(实体完整性、参照完整性和用户定义的完整性)大大减低了数据冗余和数据不一致的概率
+非关系型数据库严格上不是一种数据库，应该是一种数据结构化存储方法的集合。
+数据分片，自然便是将整体数据分摊在多个存储设备上，这样每个存储设备的数据量相对就会小很多，以此满足系统的性能需求
+无模式：各种形式的NoSQL数据库有个共同点，那就是它们都没有模式。若要在关系型数据库中存储数据，
+首先必须定义“模式”，也就是用一种预定义结构向数据库说明：要有哪些表格，表中有哪些列，
+每一列都存放何种类型的数据。必须先定义好模式，然后才能存放数据。
+事务，一般是指要做的或所做的事情。在计算机术语中是指访问并可能更新数据库中各种数据项的一个程序执行单元(unit)。
+字段			类型				描述
+capped	Boolean	（可选）如果为true，则启用封顶集合。封顶集合是固定大小的集合，会自动覆盖最早的条目，当它达到其最大大小。如果指定true，则需要也指定尺寸参数。
+size		number	（可选）指定最大大小字节封顶集合。如果封顶如果是 true，那么你还需要指定这个字段。
+max		number	（可选）指定封顶集合允许在文件的最大数量。
+use movie (创建了一个movie数据库)
+db.fav.inserOne({xxxx})  fav--数据库里面的集合／（相当于sql的表）｛xxx｝－－文档数据
+</p>
+			</div>
+	
+		</div>
+	 </div>
+	 		<%- include('footer.ejs') %>
+</body>
+</html>

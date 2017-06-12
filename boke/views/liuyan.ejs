@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css"/>
+	<link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css"/>
+	<script src="/javascripts/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/javascripts/style.js" type="text/javascript" charset="utf-8"></script>
+	
+	<title>注册</title>
+</head>
+<body id="body">
+		<%- include('header.ejs')%>
+<div class='section col-lg-12'>
+	<div class='liuyan'>
+		<div class="title">
+			<div class='headers'><p id="liu">当你想要放弃的时候，想想当初是什么让你坚持到了这里</p></div>
+		</div>
+	<form class="bottom" action="/users/liuyan" method="post">
+		<div class="form-group">标题：<input type="text" class="form-control" name="bt"/></div>
+		<div class="form-group">内容：<textarea name="txt" rows="10" class="form-control"></textarea></div>
+		<input type="submit" value="发布留言" class="btn btn-danger"/>
+	</form>
+	<hr />
+	<h2 id="xianshi">留言显示</h2>
+	<table class="table " id="ban">
+		<tr>
+			<th>标题</th>
+			<th>内容</th>
+			<th>发布人</th>
+			<td>时间</td>
+		</tr>
+	<% for(var i=result.length-1; i>-1;i--){%>
+			<tr>
+				<td><%- result[i].title %></td>
+				<td><%- result[i].con %></td>
+				<td><%- result[i].who %></td>
+				<td><%- result[i].time %></td>
+			</tr>	
+		<% } %>
+	</table>	
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css"/>
+    <script src="/javascripts/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/javascripts/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/javascripts/style.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body>
+        <%- include('header.ejs') %>
+       <div class="col-md-12 section" >
+        	<div class="col-md-9 main" >
+        		<button id="fabiao" type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">发表文章</button>
+<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div id="motai" class="modal-content">
+      <form class="bottom" action="/users/content" method="post">
+		<div class="form-group">标题：<input type="text" class="form-control" name="title"/></div>
+		<div class="form-group">摘要：<textarea name="zhaiyao" rows="2" class="form-control"></textarea></div>
+		<div class="form-group">内容：<textarea name="con" rows="15" class="form-control"></textarea></div>
+		<input type="submit" value="确定发布" class="btn btn-danger"/>
+	</form>
+    </div>
+  </div>
+</div>
+        		<ul id="mains">
+        			<% for(var i=result.length-1; i>-1;i--){%>
+        			<li class="art">
+   <div class="tit"><%- result[i].title %></div><p><span>作者：守株待兔的农夫</span><span>发布于：<%- result[i].time%></span></p>
+        			</li>
+             <% }%>
+        		</ul>
+        	</div>
+        	<div class="col-md-3 mune" >
+        		<div class="munes">
+        			<div class='gexing'>
+        				<h4>个人标签</h4>
+        				<ul>
+        					<span class="btn btn-info">菜鸟</span><span class="btn btn-info">小学生</span>
+        				</ul>
+        			</div>
+        			<div class="gexing">
+        				<h4>关于我</h4>
+        				<ul>
+        					<div id="touxiang">
+        						<img src="/images/timg.jpg"/>
+        					</div>
+        					<p>姓名：薛建帆</p>
+        					<p>爱好：敲代码</p>
+        					<p>网龄：10年</p>
+        				</ul>
+        			</div>
+        			<div class='gexing'>
+        				<h4>关注</h4>
+        				<ul>
+        				<a class="btn btn-danger" href="http://www.bootcss.com/">Bootstrap</a>
+        				<a class="btn btn-danger" href="http://www.mongodb.org.cn/">mongodb</a>
+        				<a class="btn btn-danger" href="http://www.expressjs.com.cn/">express</a>
+        				<a class="btn btn-danger" href="http://www.zcool.com.cn/">站酷</a>
+        				<a class="btn btn-danger" href="http://www.17sucai.com/">17门素材网</a>
+        				<a class="btn btn-danger" href="http://jqueryui.com/">jquery UI</a>
+        			</ul>
+        			</div>
+        		</div>
+        		
+        	</div>
+        
+			</div>
+        
+			<%- include('footer.ejs') %>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/bootstrap.min.css"/>
+    <script src="/javascripts/jquery-1.11.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/javascripts/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="/javascripts/style.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body>
+        <%- include('header.ejs') %>
+        <div class="col-md-12 section" >
+        	<div class="col-md-9 main" >
+        		<ul id="list">
+        			<h3 id="lists">最新分享<a href="/article">[查看更多]</a></h3>
+        			<% for(var i=result.length-1;i>Math.max(result.length-5,-1);i--){%>
+               <li><a href="/content">
+               	 <h3 class="fenxiang"><%- result[i].title%></h3> </a>
+    <p>作者：守株待兔的农夫</p><p>发布于：<%- result[i].time%></p>
+               	<p>摘要：<%- result[i].zhaiyao %></p>
+               	 <a href="/content" class='dianji' >全文阅读</a>
+               
+               </li>
+               <%} %>
+        		</ul>
+        	</div>	
+        	<div class='col-md-3  mune' >
+        				<div class="munes">
+        			<div class='gexing'>
+        				<h4>个人标签</h4>
+        				<ul  id="biaoqian">
+
+        					<input type="text" id="pinlun" class="form-control" placeholder="说说您对我的印象">
+        				<input type="button" id="shuo" class="btn btn-danger" value="说说">
+        	<span class="btn btn-info">菜鸟</span><span class="btn btn-info">小学生</span>
+        				</ul>
+        			</div>
+        			<div class="gexing">
+        				<h4>关于我</h4>
+        				<ul>
+        					<div id="touxiang">
+        						<img src="/images/timg.jpg"/>
+        					</div>
+        					<p>姓名：薛建帆</p>
+        					<p>爱好：敲代码</p>
+        					<p>网龄：10年</p>
+        				</ul>
+        			</div>
+        			<div class='gexing'>
+        				<h4>关注</h4>
+        				<ul>
+        				<a class="btn btn-danger" href="http://www.bootcss.com/">Bootstrap</a>
+        				<a class="btn btn-danger" href="http://www.mongodb.org.cn/">mongodb</a>
+        				<a class="btn btn-danger" href="http://www.expressjs.com.cn/">express</a>
+        				<a class="btn btn-danger" href="http://www.zcool.com.cn/">站酷</a>
+        				<a class="btn btn-danger" href="http://www.17sucai.com/">17门素材网</a>
+        				<a class="btn btn-danger" href="http://jqueryui.com/">jquery UI</a>
+        			</ul>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+		
+			<%- include('footer.ejs') %>
+			
+
+  </body>
+</html>

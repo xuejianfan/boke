@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Document</title>
+</head>
+<body>		
+	<div class="col-md-12" id="nav">
+				<div id='logos'  class='col-md-2'>City of Sky</div>
+				<% if(!user) {%>
+				<ul id="nav-left" class='col-md-4'>
+					<li><a href='/login'>登录</a></li>
+					<li><a href='/register'>注册</a></li>
+				</ul>
+				<% }else{%>
+				<ul id="nav-left" class='col-md-4'>
+					<li>欢迎: <span><%- user%></span></li>
+					<li><a href='/relogin'>退出</a></li>
+				</ul>
+				<% }%>
+				<div class='col-md-6'>
+				<ul id="nav-right" >
+					<li><a href='/'>主页</a></li>
+					<li><a href='/article'>文档</a></li>
+					<li><a href='/liuyan'>留言板</a></li>
+					<li><a href='#'>关于</a></li>
+					
+				</ul>
+				</div>
+			</div>
+	<div  id='header'>
+		<div  class='headers'>
+			<a href='/'><h1 id="logo">City of Sky<p>大道至简</p></h1></a>
+	
+		</div>
+		
+	</div>
+</body>
+</html>

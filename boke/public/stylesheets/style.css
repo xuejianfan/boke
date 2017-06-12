@@ -1,0 +1,166 @@
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img { margin:0; padding:0; }
+
+fieldset, img { border:0; }
+
+img{display: block;}
+
+address, caption, cite, code, dfn, th, var { font-style:normal; font-weight:normal; }
+
+ul, ol { list-style:none; } 
+body { color:#333; 	width:100%;
+	height:100%; font:14px "SimSun","宋体","Arial Narrow",HELVETICA,"Lucida Grande", sans-serif; background:#fff;/* overflow-y:scroll;*/ overflow-x:hidden;}
+
+a {  text-decoration:none; }
+#header{
+    position:relative;
+    left:0;top:0;
+	width:100%;height:400px;
+	padding:0;
+	background: url(../images/bgs.png) no-repeat 0 0 ;
+	background-size:100% 100%;
+	
+}
+.headers{
+	width:100%;height:100%;
+	background:rgba(0,0,0,.5);
+}
+#logo{
+	position:absolute;
+	font-size:80px;
+	left:0;right:0;top:0;bottom:0;margin:auto;
+	height:80px;
+	color:#fff;
+	letter-spacing: 5px;
+	text-align:center;
+}
+#logo p{
+	font: 30px "";
+}
+#nav{
+	position:fixed ;  
+	z-index: 10;
+	width:100%;
+	padding:0;
+	height:60px;
+	line-height:60px;
+
+}
+#logos{
+	font-size:24px;
+	color:#fff;
+	text-align:center;
+	
+	
+}
+#nav-left{float:left;}
+#nav ul li{float:left;}
+#nav ul li {float:left;
+	  padding:0 20px;
+	  color:#fff;
+	  font-size:16px;
+}
+#nav ul li span{color:#45bdef;}
+#nav ul li a{color:#fff;}
+#nav ul li a:hover{color:#45bdef;}
+#nav-right{float:right;}
+.jinru{
+	position:relative;
+	background:rgba(255,255,255,.6);
+	width:300px;
+	padding:0 20px;
+	height:300px;
+	margin:20px auto;
+  box-shadow: 0 0  20px #45bdef;
+  border-radius:5px;
+}
+.jinru h3{
+	padding:10px 0;
+}
+#sub{
+	width:80px;
+	height:40px;
+	
+	position:absolute;
+   left:0;top:140px;bottom:0;right:0;margin:auto;
+	}
+.section{background:url(../images/dbg.png) repeat;		
+		 	min-height:300px; height:auto !important;height:300px;
+		 }
+		
+.section .main{overflow:hidden;padding:0 20px;}
+#lists {margin-bottom:20px;color:#fff;}
+#lists a{margin-left:20px;font-size:18px;color:#ff6600;}
+#list li{
+			background:rgba(255,255,255,.6);
+			box-sizing: border-box;padding:20px 50px;
+			margin-bottom:30px;}
+#list li   p{font-size:16px;width:85%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+#list li h3{font-size:28px;margin-bottom:20px;}
+#list li:hover a{color:#fff;}
+#list li:hover  a:hover{color:#ff6600;}
+#list li span{margin-right:20px;}
+#list li:hover p{color:#fff;}
+#list li .dianji{margin:0 auto;margin-top:40px;color:#fff;text-align:center;line-height:30px;font-size:16px;width:80px;height:30px;display:block;background:#000;margin-bottom:20px;}
+#list li:hover{background:#000;}
+
+
+
+
+#mains{width:100%;max-height:760px;background:rgba(255,255,255,.6);padding:20px 2px;}
+#ban {text-align:center;}
+#ban th{text-align:center;}
+#xianshi{padding-left:60px;}
+#fabiao{width:80%;margin:12px 10%;font-size:20px;letter-spacing: 30px;}
+#mains li{padding:0 30px;box-sizing: border-box;overflow:hidden;
+		}
+#mains li:hover{box-shadow: 0 0 10px #00B7FF;}
+#motai{padding:20px;}
+#mains li .tit{float:left;line-height:30px;}
+#mains li  p{float:right;margin:0;line-height:30px;}
+#mains li  p span{margin:0 10px;}
+.mune{padding:0 20px;margin-top:66px;}
+.munes h4{font-size:16px;padding:10px 10px;margin:0;border-bottom:3px solid  #5bc0de;}
+.munes div:nth-of-type(n){margin-bottom:30px;background:rgba(255,255,255,.6);}
+.munes ul{padding:5px 10px;}
+.gexing ul span{margin:5px;}
+#pinlun{width:73%;display:inline-block;}
+#shuo{display:inline-block;}
+#touxiang{width:200px;margin:10px auto;height:200px;border-radius:15px;
+overflow:hidden;
+		box-shadow: 0 0 10px #00B7FF;}
+#touxiang img{width:100%;height:100%;}
+.gexing p{margin-left:20px;}
+.gexing ul a{margin: 5px;}
+
+
+
+
+
+
+
+
+.liuyan{width:90%;margin:0 auto;padding:0 5%;
+position:relative;color:#fff;
+			}
+/*     内容样式*/
+#cont-top{width:100%;height:100%;box-sizing: border-box;padding:20px 0;}
+#cont-top h3{text-align:center;}
+#cont-top p{text-align:center;}
+#cont-top p span{margin:0 10px;}
+.liuyan  .bottom{margin-top:60px;padding:20px;box-sizing: border-box;margin-bottom:20px;}
+.liuyan  #cont{background:rgba(255,255,255,.5);}
+#cont p{line-height:30px;font-size:18px;letter-spacing: 4px;text-indent: 45px;}
+.title{width:100%;height:120px;
+position:absolute;left:0;top:-120px;
+		background:url(../images/liuyan.png) no-repeat left 0 bottom 0;
+		background-size:100% ;
+		}
+.title #liu{text-align:center;font-size:24px;line-height:120px;margin:0;etter-spacing: 5px;}
+#footer{width:100%;padding:0;height:200px;background:url(../images/footer.png) no-repeat;
+			background-size: 100% 100%;color:#fff;}
+#footer p{text-align:center;}			
+#footer p:nth-of-type(1){padding-top:60px;}
+
+
+
+
